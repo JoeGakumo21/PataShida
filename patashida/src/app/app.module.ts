@@ -10,7 +10,8 @@ import { AboutComponent } from './about/about.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { AgroproductComponent } from './agroproduct/agroproduct.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import {MatProgressBarModule} from '@angular/material/progress-bar'
+// import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,12 +20,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LoginComponent,
     AboutComponent,
     ContactusComponent,
-    AgroproductComponent
+    AgroproductComponent,
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatProgressBarModule,
+    // FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
