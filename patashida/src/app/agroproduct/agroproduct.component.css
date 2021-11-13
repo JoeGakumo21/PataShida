@@ -9,3 +9,6 @@ z-index: 99;
 .content{
   padding: 16px;
 }
+.content mat-card{
+  margin: 3px;
+}
