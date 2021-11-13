@@ -14,6 +14,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar'
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import {MatButtonModule} from '@angular/material/button';
     FlexLayoutModule,
     MatToolbarModule,
     MatButtonModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
