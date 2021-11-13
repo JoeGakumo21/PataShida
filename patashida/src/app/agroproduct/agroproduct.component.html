@@ -61,14 +61,18 @@
 
 <!-- mattool for multiple row-->
 <mat-toolbar>
-  <mat-toolbar-row>
+<mat-toolbar-row style="background-color: green;" fxLayoutAlign="space-between center">
     <div>
-      <button mat-raised-button color="accent">
-        <span>AgroProducts</span>
+      <mat-icon style="font-size: 2.4rem;margin-left: 2px;color:yellow">grass</mat-icon>
+      <button mat-button style="margin-left:10px;font-size: 2rem;">
+        <span style="color:rgb(0, 255, 21);">Agro</span><span style="color:black">Products</span>
       </button>
     </div>
     <div>
-
+      <button mat-icon-button style="margin-right:3rem">
+        <mat-icon *ngIf="deviceXs">more_vert</mat-icon>
+        <span *ngIf="!deviceXs">More Details</span>
+      </button>
     </div>
   </mat-toolbar-row>
   <mat-toolbar-row *ngIf="deviceXs">
