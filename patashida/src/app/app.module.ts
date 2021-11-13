@@ -11,7 +11,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { AgroproductComponent } from './agroproduct/agroproduct.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatProgressBarModule} from '@angular/material/progress-bar'
-// import { FlexLayoutModule } from '@angular/flex-layout';
+import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +29,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar'
     AppRoutingModule,
     BrowserAnimationsModule,
     MatProgressBarModule,
-    // FlexLayoutModule
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

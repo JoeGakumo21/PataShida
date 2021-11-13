@@ -9,6 +9,17 @@ import { Subscription } from 'rxjs';
 export class AppComponent implements OnInit, OnDestroy{
 
   title = 'patashida';
+  mediaSub!: Subscription;
 
-  constructor(){}
+  constructor(public MediaObserver:MediaObserver){}
+
+  ngOnInit(): void {
+    this.mediaSub=this.MediaObserver.media$.subscribe((result:MediaChange)=>{
+      console.log(result.mqAlias);
+    })
+
+  }
+  ngOnDestroy(): void {
+    this.mediaSub.unsubscribe();
+  }
 }
