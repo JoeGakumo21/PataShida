@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { LoaderService } from '../loader/loader.service';
 
 @Component({
   selector: 'app-agroproduct',
@@ -8,6 +9,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class AgroproductComponent{
   @Input()
   deviceXs!: boolean;
- 
+ constructor (public loaderService:LoaderService){
+
+ }
 
 }
