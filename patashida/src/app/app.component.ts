@@ -10,12 +10,14 @@ export class AppComponent implements OnInit, OnDestroy{
 
   title = 'patashida';
   mediaSub!: Subscription;
+  deviceXs! :boolean;
 
   constructor(public MediaObserver:MediaObserver){}
 
   ngOnInit(): void {
     this.mediaSub=this.MediaObserver.media$.subscribe((result:MediaChange)=>{
       console.log(result.mqAlias);
+      this.deviceXs=result.mqAlias === 'xs' ? true :false;
     })
 
   }
