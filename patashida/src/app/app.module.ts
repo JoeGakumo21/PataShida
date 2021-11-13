@@ -12,6 +12,7 @@ import { AgroproductComponent } from './agroproduct/agroproduct.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatProgressBarModule} from '@angular/material/progress-bar'
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatToolbarModule} from '@angular/material/toolbar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatProgressBarModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
