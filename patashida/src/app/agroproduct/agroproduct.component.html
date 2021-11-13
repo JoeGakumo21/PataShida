@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<mat-sidenav-container lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,12 +11,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
 </head>
-<body>
-  <div class="text-center">
-    <div class="spinner-border" role="status">
-      <span class="visually-hidden">Loading...</span>
-    </div>
-  </div>
+<mat-sidenav-container>
   <nav class="navbar navbar-expand-lg navbar-light bg-success">
     <div class="container-fluid">
       <a class="navbar-brand" href="#" style="font-size: 2rem;"><span class="text-warning">Agro</span><span class=" text-dark">Product</span></a>
@@ -60,25 +55,31 @@
 </section>
 
 <!-- mattool for multiple row-->
-<mat-toolbar>
-<mat-toolbar-row style="background-color: green;" fxLayoutAlign="space-between center">
-    <div>
-      <mat-icon style="font-size: 2.4rem;margin-left: 2px;color:yellow">grass</mat-icon>
-      <button mat-button style="margin-left:10px;font-size: 2rem;">
-        <span style="color:rgb(0, 255, 21);">Agro</span><span style="color:black">Products</span>
-      </button>
-    </div>
-    <div>
-      <button mat-icon-button style="margin-right:3rem">
-        <mat-icon *ngIf="deviceXs">more_vert</mat-icon>
-        <span *ngIf="!deviceXs">More Details</span>
-      </button>
-    </div>
-  </mat-toolbar-row>
-  <mat-toolbar-row *ngIf="deviceXs">
-    <span>Second</span>
-  </mat-toolbar-row>
-</mat-toolbar>
+<div class="container-fluid">
+  <div>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </div>
+  <mat-toolbar>
+    <mat-toolbar-row style="background-color: green;" fxLayoutAlign="space-between center">
+        <div>
+          <mat-icon style="font-size: 2.4rem;margin-left: 2px;color:yellow">grass</mat-icon>
+          <button mat-button style="margin-left:10px;font-size: 2.5rem;">
+            <span style="color:rgb(0, 255, 21);">Agro</span><span style="color:black">Products</span>
+          </button>
+        </div>
+        <div>
+          <button mat-icon-button style="margin-right:10rem;font-size:1.5rem">
+            <mat-icon *ngIf="deviceXs">more_vert</mat-icon>
+            <span *ngIf="!deviceXs">More Details</span>
+          </button>
+        </div>
+      </mat-toolbar-row>
+      <mat-toolbar-row *ngIf="deviceXs">
+        <span>Second</span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+
+</div>
+
 <!-- end -->
-</body>
-</html>
