@@ -10,7 +10,7 @@ import { RegisterComponent } from './register/register.component';
 const routes: Routes = [
 
   {path:'about',component:AboutComponent},
-  {path: 'login' ,component:LoginComponent},
+  {path:'login' ,component:LoginComponent},
   {path:'register',component:RegisterComponent},
   {path:'agroproduct',component:AgroproductComponent},
   {path:'contactus',component:ContactusComponent},
@@ -24,3 +24,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+export const routingComponents=[AboutComponent,LoginComponent,RegisterComponent,AgroproductComponent,ContactusComponent,HomeComponent]
