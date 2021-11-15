@@ -8,7 +8,6 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
 import { ContactusComponent } from './contactus/contactus.component';
-<<<<<<< HEAD
 import { AgroproductComponent } from './agroproduct/agroproduct.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatProgressBarModule} from '@angular/material/progress-bar'
@@ -22,12 +21,6 @@ import { InterceptorService } from './loader/interceptor.service';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatCardModule} from '@angular/material/card';
 
-=======
-import { NavbarComponent } from './navbar/navbar.component';
-import{FormsModule} from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
->>>>>>> 5a67848104891761b8bdc0440dea394f6164ae68
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +29,6 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     AboutComponent,
     ContactusComponent,
-<<<<<<< HEAD
     AgroproductComponent,
 
 
@@ -57,16 +49,6 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   providers: [
     {provide:HTTP_INTERCEPTORS, useClass:InterceptorService,multi:true}
-=======
-    NavbarComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
->>>>>>> 5a67848104891761b8bdc0440dea394f6164ae68
   ],
   bootstrap: [AppComponent]
 })

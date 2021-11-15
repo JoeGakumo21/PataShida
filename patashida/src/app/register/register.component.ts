@@ -16,7 +16,7 @@ export class RegisterComponent implements OnInit {
   is_health_practitioner:boolean|any;
   user:any;
   constructor(private api:ApiService) {
-  
+
   }
   ngOnInit() {
     this.registerUser();
@@ -29,7 +29,7 @@ export class RegisterComponent implements OnInit {
       console.log(this.email)
       console.log(this.password1)
       console.log(this.password2)
-    
+
     },
     error => {
       console.log(error);
@@ -37,9 +37,8 @@ export class RegisterComponent implements OnInit {
       console.log(this.email)
       console.log(this.password1)
       console.log(this.password2)
-    
+
     });
   }
 }
-
 
