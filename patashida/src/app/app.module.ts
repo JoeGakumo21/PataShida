@@ -20,6 +20,8 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { InterceptorService } from './loader/interceptor.service';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatCardModule} from '@angular/material/card';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,10 +32,12 @@ import {MatCardModule} from '@angular/material/card';
     AboutComponent,
     ContactusComponent,
     AgroproductComponent,
+    NavbarComponent,
 
 
   ],
   imports: [
+
 
   BrowserModule,
     AppRoutingModule,
@@ -46,6 +50,7 @@ import {MatCardModule} from '@angular/material/card';
     MatSidenavModule,
     MatProgressSpinnerModule,
     MatCardModule,
+    FormsModule ,
   ],
   providers: [
     {provide:HTTP_INTERCEPTORS, useClass:InterceptorService,multi:true}

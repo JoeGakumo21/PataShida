@@ -11,9 +11,6 @@ export class RegisterComponent implements OnInit {
   email:string|any;
   password1:string|any;
   password2:string|any;
-  is_admin:boolean|any;
-  is_patient:boolean|any;
-  is_health_practitioner:boolean|any;
   user:any;
   constructor(private api:ApiService) {
 
