@@ -1,4 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+<<<<<<< HEAD
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+=======
+@import "~bootstrap/dist/css/bootstrap.css";
+body{
+    background-image: url('/patashida/src/assets/images/login-unsplash.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    
+    
+}
+>>>>>>> 5a67848104891761b8bdc0440dea394f6164ae68
