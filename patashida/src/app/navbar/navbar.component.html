@@ -1,60 +1,30 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-<!-- <div class="container-fluid">
-<nav style="background-color: #3CAB5B">
-  <div class="fine">
-    <h1 class="pata">Pata</h1><h1 class="shida">shida</h1>
-  </div>
+<div class="container-fluid mt-2" style="border-radius: 5px;">
+  <p>
+    <mat-toolbar color="primary" style="background-color: rgb(29, 156, 40);margin:px;">
+      <mat-toolbar-row>
+        <mat-icon style="font-size: 2.4rem;margin-left: 2px;color:yellow">grass</mat-icon>
+        <button mat-button style="margin-left:10px;font-size: 2.5rem;">
+        <span style="color:rgb(0, 255, 21);">Pata</span><span>Shida</span>
+        </button>
+        <span class="example-spacer"></span>
+      </mat-toolbar-row>
 
-   <div class="contact">
-    <h3>get us via:</h3>
-    <br>
-    <h4>+254743515249</h4>
- </div>
+      <mat-toolbar-row style="background-color: rgb(59, 59, 46);">
+        <div >
+          <a mat-button [routerLink]="'/home'" style="font-size: 2rem;" class="home">Home </a>
+          <a mat-button [routerLink]="'/about'" style="font-size: 2rem;"  class="home"> About </a>
+          <a mat-button [routerLink]="'/agroproduct'" style="font-size: 2rem;" class="home">Agri-Products </a>
+          <a mat-button [routerLink]="'/login'" style="font-size: 2rem;" class="home"> Login </a>
+          <a mat-button [routerLink]="'/register'" style="font-size: 2rem;"  class="home"> Register </a>
 
-   <ul class="navlist">
-    <li><a href="https://github.com/Maureen-1998DEV" target="_blank"><i class="fab fa-github fa-2x" style="color: black;"></i></a></li>
-    <li><a  href="#" target="_blank"><i class="fab fa-linkedin-in fa-2x"style="color: black;"></i></a></li>
-    <li><a href="https://twitter.com/Maureen Ougo" target="_blank"><i class="fab fa-twitter fa-2x"style="color: black;"></i></a></li>
-    <li><a href="https://www.facebook.com/Maureen Ougo" target="_blank"><i class="fab fa-facebook fa-2x"style="color: black;"></i></a>
-    </li>
-</ul>
-</nav>
-</div> -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" routerLink="home">Home</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a routerLink="/about" class="nav-link">About</a>
-          </li>
-          <li class="nav-item">
-            <a routerLink="/agroproduct" class="nav-link" >Agriproducts</a>
-          </li>
-          <li class="nav-item">
-            <a routerLink="/register" class="nav-link">Register</a>
-          </li>
-          <li class="nav-item">
-            <a routerLink="/login" class="nav-link">Login</a>
-          </li>
-        </ul>
-
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </p>
+</div>
 
 
-      </div>
-
-
-
-    </div>
-  </nav>
 
