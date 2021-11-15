@@ -6,7 +6,7 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  baseurl='';
+  baseurl='https://agric-7.herokuapp.com/';
   httpHeaders = new HttpHeaders({'Content-Type' : "application/json"});
   constructor(private http:HttpClient) { }
   registerUser(username:any,email:any,password1:any,password2:any):Observable<any>{

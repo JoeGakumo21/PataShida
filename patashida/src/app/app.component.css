@@ -6,7 +6,7 @@
 }
 nav{
     display: flex;
-    padding-left:3%;
+    padding-left:3.5%;
 }
 
 .contact{
@@ -20,7 +20,7 @@ nav{
     list-style:none;
     padding-left: 50%;
     color:black;
-    margin:2%;
+    margin:4%;
 
 }
 li{
