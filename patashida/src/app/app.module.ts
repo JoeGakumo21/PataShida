@@ -25,6 +25,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { PredictionComponent } from './prediction/prediction.component';
 
 
 
@@ -39,6 +40,7 @@ import { HttpClientModule } from '@angular/common/http';
     ContactusComponent,
     AgroproductComponent,
     NavbarComponent,
+    PredictionComponent,
 
 
   ],

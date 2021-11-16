@@ -1,10 +1,11 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { AgroproductComponent } from './agroproduct/agroproduct.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { PredictionComponent } from './prediction/prediction.component';
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path:'register',component:RegisterComponent},
   {path:'agroproduct',component:AgroproductComponent},
   {path:'contactus',component:ContactusComponent},
-  {path:'',component:HomeComponent}
+  {path:'home',component:HomeComponent},
+  {path: 'prediction',component:PredictionComponent}
 
 
 ];
