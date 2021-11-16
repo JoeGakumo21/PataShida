@@ -28,6 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +59,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule ,
     HttpClientModule,
     ReactiveFormsModule ,
-    
+
   ],
   providers: [
     {provide:HTTP_INTERCEPTORS, useClass:InterceptorService,multi:true}

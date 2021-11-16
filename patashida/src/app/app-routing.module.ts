@@ -14,7 +14,7 @@ const routes: Routes = [
   {path:'register',component:RegisterComponent},
   {path:'agroproduct',component:AgroproductComponent},
   {path:'contactus',component:ContactusComponent},
-  {path:'home',component:HomeComponent}
+  {path:'',component:HomeComponent}
 
 
 ];
