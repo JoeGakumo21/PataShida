@@ -26,6 +26,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PredictionComponent } from './prediction/prediction.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 
@@ -61,6 +62,7 @@ import { PredictionComponent } from './prediction/prediction.component';
     FormsModule ,
     HttpClientModule,
     ReactiveFormsModule ,
+    MatFormFieldModule,
 
   ],
   providers: [
