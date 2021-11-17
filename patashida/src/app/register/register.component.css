@@ -10,11 +10,17 @@ h2{
     padding-left:23%;
     padding-bottom: 5%;
     font-size: 400%;
-    
+
 }
 .btn{
     padding-left:10%;
     padding-right: 10%;
     margin-left:20%;
     text-align: center;
+}
+.mat-card{
+  padding: 0px;
+}
+.login-form{
+  padding: 10px;
 }
