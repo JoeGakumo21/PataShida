@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from '../api.service';
 @Component({
   selector: 'app-login',
@@ -6,7 +7,9 @@ import { ApiService } from '../api.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+  // joe edittion
+  formGroup!:FormGroup
+  // ends
   username:string|any;
   password:string|any;
   loginData:any
@@ -38,6 +41,13 @@ export class LoginComponent implements OnInit {
     err => {
       console.log(err)
     });
+  }
+  // initialize the form
+  initForm(){
+    this.formGroup =new FormGroup({
+      username:new FormControl('',[Validators.required]),
+      password:new FormControl('',[Validators.required])
+    })
   }
 }
 

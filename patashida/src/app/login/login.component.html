@@ -54,16 +54,16 @@
 <div fxLayoutAlign="center center" fxFlexFill>
   <mat-card fxFlex="30">
     <mat-toolbar  style="background-color:rgb(29, 156, 40);">Login Page</mat-toolbar>
-    <form fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+    <form fxLayoutAlign="stretch" fxLayout="column" class="login-form" [formGroup]="formGroup">
       <mat-form-field >
-        <input matInput placeholder="Username" style="font-size: 2rem;" required>
+        <input matInput placeholder="Username" style="font-size: 2rem;" formControlName="username">
       </mat-form-field>
 
       <mat-form-field>
-        <input matInput type="password" placeholder="Password" style="font-size: 2rem;" required>
+        <input matInput type="password" placeholder="Password" style="font-size: 2rem;" formControlName="password">
       </mat-form-field>
       <button mat-raised-button color="primary" type="submit" style="font-size: 2rem;">Login</button>
-   
+
     </form>
 
 
