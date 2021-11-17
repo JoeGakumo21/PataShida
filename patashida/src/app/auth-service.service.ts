@@ -12,5 +12,8 @@ export class AuthServiceService {
    login(data:any):Observable<any>{
      return this.http.post(`${mybaseUrl}`,data);
    }
+   register(data:any):Observable<any>{
+    return this.http.post(`${mybaseUrl}`,data);
+  }
 
 }

@@ -54,27 +54,33 @@
 </body>
 </html> -->
 <!-- login in angular -->
+<body>
+
+
 <div fxLayoutAlign="center center" fxFlexFill>
-  <mat-card fxFlex="30">
-    <mat-toolbar  style="background-color:rgb(29, 156, 40);">Register Page</mat-toolbar>
-    <form fxLayoutAlign="stretch" fxLayout="column" class="login-form">
+  <mat-card fxFlex="30" style="opacity: 0.6;">
+    <mat-toolbar  style="background-color:rgb(29, 156, 40);font-size: 2rem;" fxLayoutAlign="center center " color="accent">Register Page</mat-toolbar>
+    <form fxLayoutAlign="stretch" fxLayout="column" class="login-form" [formGroup]="formGroup" >
       <mat-form-field >
-        <input matInput placeholder="Username"  type="text" style="font-size: 2rem;" required>
+        <input matInput placeholder="Username"  type="text" style="font-size: 2rem;" formControlName="username">
       </mat-form-field>
       <mat-form-field >
-        <input matInput placeholder="email" type="email" style="font-size: 2rem;" required>
+        <input matInput placeholder="email" type="email" style="font-size: 2rem;" formControlName="email">
       </mat-form-field>
       <mat-form-field >
-        <input matInput type="password" placeholder="password1" style="font-size: 2rem;" required>
+        <input matInput type="password" placeholder="password1" style="font-size: 2rem;" formControlName="password1">
       </mat-form-field>
 
       <mat-form-field>
-        <input matInput type="password" placeholder="Confirm Password" style="font-size: 2rem;" required>
+        <input matInput type="password" placeholder="Confirm Password" style="font-size: 2rem;" formControlName="password2">
       </mat-form-field>
-      <button mat-raised-button color="primary" type="submit" style="font-size: 2rem;">Signup</button>
+      <div>
+      <button mat-raised-button color="primary" type="submit" style="font-size: 2rem;" (ngSubmit)="registerProcess()">Signup</button>
+      <a href="login" style="color:black;margin-left:15px; text-decoration: none;font-size: 1.5rem;">Already have Account? <span style="color:rgb(240, 54, 193)">Login</span></a>
+    </div>
     </form>
 
   </mat-card>
 </div>
-
+</body>
 <!--  -->

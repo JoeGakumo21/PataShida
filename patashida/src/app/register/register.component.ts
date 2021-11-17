@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from '../api.service';
+import { AuthServiceService } from '../auth-service.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -7,15 +9,21 @@ import { ApiService } from '../api.service';
 })
 export class RegisterComponent implements OnInit {
 
+  // joe edittion
+  formGroup!:FormGroup
+  // ends
   username:string|any;
   email:string|any;
   password1:string|any;
   password2:string|any;
   user:any;
-  constructor(private api:ApiService) {
+  constructor(private api:ApiService,  private AuthService:AuthServiceService) {
 
   }
   ngOnInit() {
+    // joe
+    this.initForm();
+    // end
     this.registerUser();
   }
   registerUser = () =>{
@@ -37,5 +45,29 @@ export class RegisterComponent implements OnInit {
 
     });
   }
+  // initialize the form
+  initForm(){
+    this.formGroup =new FormGroup({
+      username:new FormControl('',[Validators.required]),
+      email:new FormControl('',[Validators.required]),
+      password1:new FormControl('',[Validators.required]),
+      password2:new FormControl('',[Validators.required])
+    })
+  }
+  // end
+  // loginprocess method
+  registerProcess(){
+    if(this.formGroup.valid){
+      this.AuthService.register(this.formGroup.value).subscribe(result=>{
+        if(result.success){
+          console.log(result);
+          alert(result.message);
+        }else{
+          alert(result.message);
+        }
+      })
+    }
+  }
+  // end
 }
 
