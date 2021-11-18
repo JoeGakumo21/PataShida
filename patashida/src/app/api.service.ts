@@ -13,16 +13,18 @@ export class ApiService {
     const body = {username,email,first_name,last_name,password}
     return this.http.post(this.baseurl + 'app/api/users/create/', body);
   }
-  loginUser(username:any,password:any):Observable<any>{
+  loginUser(username:any,password:any,):Observable<any>{
     const body = {username,password}
-    return this.http.post(this.baseurl + '​app/api​/auth​/login​/', body,
-    {
-      headers: {
-        Authorization: 'Bearer ' + this.Token,
-      },
-    }
-    );
-
+    return this.http.post(this.baseurl + '​/app/api/auth/login/', body);
   }
+  getAllUsers(accessToken:any):Observable<any>{
+    return this.http.get(this.baseurl + 'api/users/',
+    {
+      headers:{
+        Authorization:'Bearer ' + accessToken,
+      },
+    });
+  }
+  
 
 }
