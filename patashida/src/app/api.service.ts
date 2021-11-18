@@ -5,6 +5,11 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
+  static isRegisterUser: any;
+  isLoggedIn: any;
+  static isregisterUser() {
+    throw new Error('Method not implemented.');
+  }
   baseurl='https://farmauth7.herokuapp.com/';
   Token= "9566d27e6501fafceacfadec896fa9d7cd75a79b"
   httpHeaders = new HttpHeaders({'Content-Type' : "application/json"});
@@ -13,16 +18,18 @@ export class ApiService {
     const body = {username,email,first_name,last_name,password}
     return this.http.post(this.baseurl + 'app/api/users/create/', body);
   }
-  loginUser(username:any,password:any):Observable<any>{
+  loginUser(username:any,password:any,):Observable<any>{
     const body = {username,password}
-    return this.http.post(this.baseurl + '​app/api​/auth​/login​/', body,
-    {
-      headers: {
-        Authorization: 'Bearer ' + this.Token,
-      },
-    }
-    );
-
+    return this.http.post(this.baseurl + '​/app/api/auth/login/', body);
   }
+  getAllUsers(accessToken:any):Observable<any>{
+    return this.http.get(this.baseurl + 'api/users/',
+    {
+      headers:{
+        Authorization:'Bearer ' + accessToken,
+      },
+    });
+  }
+
 
 }

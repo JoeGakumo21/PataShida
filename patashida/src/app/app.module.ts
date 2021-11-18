@@ -24,9 +24,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
 import { LoginComponent } from './login/login.component';
-
 import { PredictionComponent } from './prediction/prediction.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
@@ -71,9 +69,7 @@ import {MatInputModule} from '@angular/material/input';
     MatInputModule,
 
   ],
-  providers: [
-    
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
