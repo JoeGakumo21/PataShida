@@ -6,16 +6,17 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  baseurl='https://agric-7.herokuapp.com/';
+  baseurl='https://farmauth7.herokuapp.com/';
+  Token= "9566d27e6501fafceacfadec896fa9d7cd75a79b"
   httpHeaders = new HttpHeaders({'Content-Type' : "application/json"});
   constructor(private http:HttpClient) { }
-  registerUser(username:any,email:any,password1:any,password2:any):Observable<any>{
-    const body = {username,email,password1,password2}
-    return this.http.post(this.baseurl + 'user_registration/', body);
+  registerUser(username:any,email:any,first_name:any ,last_name:any,password:any):Observable<any>{
+    const body = {username,email,first_name,last_name,password}
+    return this.http.post(this.baseurl + 'app/api/users/create/', body);
   }
-  loginUser(username:any,password:any):Observable<any>{
+  loginUser(username:any,password:any,):Observable<any>{
     const body = {username,password}
-    return this.http.post(this.baseurl + 'login/', body);
+    return this.http.post(this.baseurl + '​/app/api/auth/login/', body);
   }
   getAllUsers(accessToken:any):Observable<any>{
     return this.http.get(this.baseurl + 'api/users/',
@@ -27,3 +28,6 @@ export class ApiService {
   }
   
 }
+
+  
+  

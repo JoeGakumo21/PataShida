@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -8,6 +9,7 @@ import { ApiService } from '../api.service';
 export class LoginComponent implements OnInit {
 
   username:string|any;
+  email:string|any;
   password:string|any;
   loginData:any
   accessToken:any;
@@ -22,6 +24,7 @@ export class LoginComponent implements OnInit {
       this.loginData=data
       console.log(data)
       console.log(this.username)
+      
       console.log(this.password)
     },
     error => {
@@ -40,5 +43,3 @@ export class LoginComponent implements OnInit {
     });
   }
 }
-
-
