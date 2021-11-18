@@ -5,6 +5,11 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
+  static isRegisterUser: any;
+  isLoggedIn: any;
+  static isregisterUser() {
+    throw new Error('Method not implemented.');
+  }
   baseurl='https://farmauth7.herokuapp.com/';
   Token= "9566d27e6501fafceacfadec896fa9d7cd75a79b"
   httpHeaders = new HttpHeaders({'Content-Type' : "application/json"});
@@ -25,6 +30,6 @@ export class ApiService {
       },
     });
   }
-  
+
 
 }

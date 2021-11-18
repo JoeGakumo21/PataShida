@@ -13,7 +13,7 @@ export class RegisterComponent implements OnInit {
   last_name:string|any;
   password:string|any;
   user:any;
-  constructor(private api:ApiService) {
+  constructor(private api:ApiService,) {
 
   }
   ngOnInit() {

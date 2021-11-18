@@ -1,5 +1,8 @@
+
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
+import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot } from '@angular/router';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -7,13 +10,15 @@ import { ApiService } from '../api.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
 
   username:string|any;
   password:string|any;
   loginData:any
 
-  constructor(private api:ApiService) { }
+  constructor(private api:ApiService, private router:Router) {
+  }
   ngOnInit(){
 
     this.loginUser();
@@ -26,6 +31,7 @@ export class LoginComponent implements OnInit {
       console.log(this.username)
       console.log(this.password)
       alert("Logged in successfully, welcome")
+
     },
     error => {
       console.log(error);
@@ -36,3 +42,16 @@ export class LoginComponent implements OnInit {
   }
 }
 
+export class LoginActivate implements CanActivate {
+  constructor( private api:ApiService,private router: Router) {}
+
+  canActivate(
+    route: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot
+  ): Observable<boolean>|Promise<boolean>|boolean {
+    if (!this.api.isLoggedIn()) {
+      this.router.navigate(['prediction']);
+    }
+    return true;
+  }
+}
