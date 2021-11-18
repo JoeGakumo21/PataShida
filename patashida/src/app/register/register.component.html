@@ -1,0 +1,40 @@
+<body>
+  <div class="container mr-5 pt-5">
+
+     <div class="context">
+       <h2 text-align="center">Sign up</h2>
+     <div class="mb-3 row " >
+       <label for="name" class="col-sm-2 col-form-label">Username</label>
+       <div class="col-sm-4">
+         <input type="text" class="form-control" id="inputPassword" [(ngModel)]="username" name="username" required>
+       </div>
+     </div>
+     <div class="mb-3 row " >
+       <label for="name" class="col-sm-2 col-form-label">first_name</label>
+       <div class="col-sm-4">
+         <input type="text" class="form-control" id="inputPassword" [(ngModel)]="first_name" name="first_name" required>
+       </div>
+     </div>
+     <div class="mb-3 row " >
+       <label for="name" class="col-sm-2 col-form-label">last_name</label>
+       <div class="col-sm-4">
+         <input type="text" class="form-control" id="inputPassword" [(ngModel)]="last_name" name="last_name" required>
+       </div>
+     </div>
+     <div class="mb-3 row " >
+       <label for="email" class="col-sm-2 col-form-label">email Address</label>
+       <div class="col-sm-4">
+         <input type="email" class="form-control" id="inputPassword" [(ngModel)]="email" name="email" required>
+       </div>
+     </div>
+     <div class="mb-3 row ">
+       <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+       <div class="col-sm-4">
+         <input type="password" class="form-control" id="inputPassword" [(ngModel)]="password" name="password" required>
+       </div>
+     </div>
+     <button class="btn btn-primary" type="submit" (click)="registerUser()">Sign Up</button>
+   </div>
+  </div>
+
+ </body>
