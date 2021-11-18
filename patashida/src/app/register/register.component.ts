@@ -28,6 +28,7 @@ export class RegisterComponent implements OnInit {
       console.log(this.first_name)
       console.log(this.last_name)
       console.log(this.password)
+      alert("New user created successfully");
     },
     error => {
       console.log(error);
