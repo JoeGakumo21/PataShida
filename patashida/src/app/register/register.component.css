@@ -1,4 +1,10 @@
-
+body{
+  background-image: url("https://agriculturepost.com/wp-content/uploads/2019/06/How-Artificial-Intelligence-is-making-difference-in-agriculture.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: red;
+}
 
 .container{
     padding: 5%;
@@ -10,11 +16,17 @@ h2{
     padding-left:23%;
     padding-bottom: 5%;
     font-size: 400%;
-    
+
 }
 .btn{
     padding-left:10%;
     padding-right: 10%;
     margin-left:20%;
     text-align: center;
+}
+.mat-card{
+  padding: 0px;
+}
+.login-form{
+  padding: 10px;
 }

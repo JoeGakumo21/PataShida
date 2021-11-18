@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from '../api.service';
+
+import { AuthServiceService } from '../auth-service.service';
 
 @Component({
   selector: 'app-login',
@@ -7,15 +10,20 @@ import { ApiService } from '../api.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+  // joe edittion
+  formGroup!:FormGroup
+  // ends
   username:string|any;
   email:string|any;
   password:string|any;
   loginData:any
   accessToken:any;
   foundUsers:any;
-  constructor(private api:ApiService) { }
+  constructor(private api:ApiService, private AuthService:AuthServiceService) { }
   ngOnInit(){
+    // joe
+    this.initForm();
+    // end
     this.loginUser();
     this.getUsers();
   }
@@ -43,3 +51,4 @@ export class LoginComponent implements OnInit {
     });
   }
 }
+

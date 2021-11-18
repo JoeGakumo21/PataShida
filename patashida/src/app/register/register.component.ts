@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from '../api.service';
+import { AuthServiceService } from '../auth-service.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -7,17 +9,28 @@ import { ApiService } from '../api.service';
 })
 export class RegisterComponent implements OnInit {
 
+  // joe edittion
+  formGroup!:FormGroup
+  // ends
   username:string|any;
   email:string|any;
+
   first_name:string|any;
   last_name:string|any;
   password:string|any;
 
   user:any;
   constructor(private api:ApiService) {
-    
+   
+  user:any;
+  constructor(private api:ApiService) {
+
+
   }
   ngOnInit() {
+    // joe
+    this.initForm();
+    // end
     this.registerUser();
   }
   registerUser = () =>{
@@ -26,20 +39,24 @@ export class RegisterComponent implements OnInit {
       console.log(data)
       console.log(this.username)
       console.log(this.email)
+
       console.log(this.first_name)
       console.log(this.last_name)
       console.log(this.password)
+
     },
     error => {
       console.log(error);
       console.log(this.username)
       console.log(this.email)
+
       console.log(this.first_name)
       console.log(this.last_name)
       console.log(this.password)
-    
+
     });
   }
+ 
+ 
 }
-
 
