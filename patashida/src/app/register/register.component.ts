@@ -14,10 +14,17 @@ export class RegisterComponent implements OnInit {
   // ends
   username:string|any;
   email:string|any;
-  password1:string|any;
-  password2:string|any;
+
+  first_name:string|any;
+  last_name:string|any;
+  password:string|any;
+
   user:any;
-  constructor(private api:ApiService,  private AuthService:AuthServiceService) {
+  constructor(private api:ApiService) {
+   
+  user:any;
+  constructor(private api:ApiService) {
+
 
   }
   ngOnInit() {
@@ -27,47 +34,29 @@ export class RegisterComponent implements OnInit {
     this.registerUser();
   }
   registerUser = () =>{
-    return this.api.registerUser(this.username,this.email,this.password1,this.password2).subscribe(data => {
+    return this.api.registerUser(this.username,this.email,this.first_name,this.last_name,this.password).subscribe(data => {
       this.user=data;
       console.log(data)
       console.log(this.username)
       console.log(this.email)
-      console.log(this.password1)
-      console.log(this.password2)
+
+      console.log(this.first_name)
+      console.log(this.last_name)
+      console.log(this.password)
 
     },
     error => {
       console.log(error);
       console.log(this.username)
       console.log(this.email)
-      console.log(this.password1)
-      console.log(this.password2)
+
+      console.log(this.first_name)
+      console.log(this.last_name)
+      console.log(this.password)
 
     });
   }
-  // initialize the form
-  initForm(){
-    this.formGroup =new FormGroup({
-      username:new FormControl('',[Validators.required]),
-      email:new FormControl('',[Validators.required]),
-      password1:new FormControl('',[Validators.required]),
-      password2:new FormControl('',[Validators.required])
-    })
-  }
-  // end
-  // loginprocess method
-  registerProcess(){
-    if(this.formGroup.valid){
-      this.AuthService.register(this.formGroup.value).subscribe(result=>{
-        if(result.success){
-          console.log(result);
-          alert(result.message);
-        }else{
-          alert(result.message);
-        }
-      })
-    }
-  }
-  // end
+ 
+ 
 }
 
