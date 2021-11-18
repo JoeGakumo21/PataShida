@@ -1,11 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
-
-body {
-    background: linear-gradient(0deg, #fff, 50%, #DEEEFE);
-    font-family: 'Rubik', sans-serif;
-    background: #455A64;
-    height: 100 !important
+body{
+  background-image: url("https://media.istockphoto.com/photos/harvesting-machine-approaching-wheat-picture-id1270570904?b=1&k=20&m=1270570904&s=170667a&w=0&h=IDgfgBz2v_fYfVtdAHbnVPnL8ncIN6TZMufQNskjsZs=");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+.card{
+  min-height: 450px;
+  background-color: #6C8140;
+  opacity: .7;
+}
+
+
+
 
 .container-fluid {
     overflow: hidden;
@@ -38,10 +45,6 @@ h3 {
 
 .rights {
     font-size: calc(10px + (12 - 10) * ((100vw - 360px) / (1600 - 360))) !important
-}
-.container{
-  height:70vh ;
-  margin-bottom: 20px;
 }
 
 
