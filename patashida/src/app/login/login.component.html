@@ -55,7 +55,7 @@
 <div fxLayoutAlign="center center" fxFlexFill>
   <mat-card fxFlex="30" style="opacity: 0.6;">
     <mat-toolbar  style="background-color:rgb(29, 156, 40);font-size: 2rem;" fxLayoutAlign="center center " color="accent">Login Page</mat-toolbar>
-    <form fxLayoutAlign="stretch" fxLayout="column" class="login-form" [formGroup]="formGroup">
+    <form fxLayoutAlign="stretch" fxLayout="column" class="login-form" [formGroup]="formGroup" (ngSubmit)="loginProcess()">
       <mat-form-field >
         <input matInput placeholder="Username" style="font-size: 2rem;" formControlName="username">
       </mat-form-field>
@@ -64,7 +64,7 @@
         <input matInput type="password" placeholder="Password" style="font-size: 2rem;" formControlName="password">
       </mat-form-field>
       <div>
-        <button mat-raised-button color="primary" type="submit" (ngSubmit)="loginProcess()" style="font-size: 2rem;">Login</button>
+        <button mat-raised-button color="primary" type="submit" style="font-size: 2rem;">Login</button>
         <a href="register" style="color:black;margin-left:15px; text-decoration: none;font-size: 1.5rem;">Don't have Account? <span style="color:rgb(240, 54, 193)">Register now</span></a>
       </div>
 
