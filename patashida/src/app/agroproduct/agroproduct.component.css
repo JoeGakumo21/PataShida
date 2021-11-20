@@ -1,0 +1,14 @@
+.loader-spinner{
+position: absolute;
+height: 100%;
+width: 100%;
+background-color: black;
+opacity: .8;
+z-index: 99;
+}
+.content{
+  padding: 16px;
+}
+.content mat-card{
+  margin: 3px;
+}
