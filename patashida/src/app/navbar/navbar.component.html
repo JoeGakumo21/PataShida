@@ -23,19 +23,38 @@
         </div>
       </mat-toolbar-row>
 
-      <mat-toolbar-row style="background-color: rgb(59, 59, 46);">
-        <div >
-          <a mat-button [routerLink]="'/home'" style="font-size: 2rem;" class="home active">Home </a>
-          <a mat-button [routerLink]="'/about'" style="font-size: 2rem;"  class="home"> About </a>
-          <a mat-button [routerLink]="'/agroproduct'" style="font-size: 2rem;" class="home">Agri-Products </a>
-          <a mat-button [routerLink]="'/login'" style="font-size: 2rem;" class="home"> Login </a>
-          <a mat-button [routerLink]="'/register'" style="font-size: 2rem;"  class="home"> Register </a>
-
-        </div>
-      </mat-toolbar-row>
     </mat-toolbar>
   </p>
 </div>
-
-
-
+<div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(59, 59, 46);">
+  <div class="container-fluid">
+    <a class="navbar-brand text-light" style="font-size: 2rem;"  href="/">PataShida</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item text-light">
+          <a [routerLink]="'/home'" style="font-size: 2rem;" class="home  nav-link active text-light">Home</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="'/about'" style="font-size: 2rem;"  class="nav-link text-light" >About</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="'/agroproduct'" style="font-size: 2rem;"  class="nav-link text-light" >AgriProducts</a>
+        </li>
+        <li class="nav-item dropdown" style="float: right;">
+          <a class="nav-link dropdown-toggle text-light" style="font-size: 2rem;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Account
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a [routerLink]="'/login'" style="font-size: 2rem;" class="dropdown-item nav-link">Login</a></li>
+            <li><a [routerLink]="'/register'" style="font-size: 2rem;" class="dropdown-item nav-link">Register</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
