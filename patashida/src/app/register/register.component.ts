@@ -29,7 +29,7 @@ export class RegisterComponent implements OnInit {
       console.log(this.first_name)
       console.log(this.last_name)
       console.log(this.password)
-      alert("New user created successfully"+ " " + this.username);
+      alert("New user created successfully"+ " " + this.username +", Kindly continue to Login");
       this.router.navigate(['/login'])
     },
     error => {
