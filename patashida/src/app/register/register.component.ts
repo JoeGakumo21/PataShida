@@ -1,6 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -13,7 +14,7 @@ export class RegisterComponent implements OnInit {
   last_name:string|any;
   password:string|any;
   user:any;
-  constructor(private api:ApiService,) {
+  constructor(private api:ApiService, private router:Router) {
 
   }
   ngOnInit() {
@@ -29,6 +30,7 @@ export class RegisterComponent implements OnInit {
       console.log(this.last_name)
       console.log(this.password)
       alert("New user created successfully"+ " " + this.username);
+      this.router.navigate(['/login'])
     },
     error => {
       console.log(error);
@@ -37,7 +39,7 @@ export class RegisterComponent implements OnInit {
       console.log(this.first_name)
       console.log(this.last_name)
       console.log(this.password)
-      
+
     });
   }
 }

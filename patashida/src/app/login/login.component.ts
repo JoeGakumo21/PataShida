@@ -31,6 +31,7 @@ export class LoginComponent implements OnInit {
       console.log(this.username)
       console.log(this.password)
       alert("Logged in successfully, welcome")
+      this.router.navigate(['/prediction'])
 
     },
     error => {
