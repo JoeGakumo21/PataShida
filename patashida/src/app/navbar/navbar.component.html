@@ -32,21 +32,24 @@
           <a [routerLink]="'/home'" style="font-size: 2rem;" class="home  nav-link active text-light">Home</a>
         </li>
         <li class="nav-item">
-          <a [routerLink]="'/about'" style="font-size: 2rem;"  class="nav-link text-light float-right" >About</a>
+          <a [routerLink]="'/about'" style="font-size: 2rem;"  class="nav-link text-light" >About</a>
         </li>
         <li class="nav-item">
           <a [routerLink]="'/agroproduct'" style="font-size: 2rem;"  class="nav-link text-light" >AgriProducts</a>
         </li>
+        </ul>
         <li class="nav-item dropdown" style="float: right;">
           <a class="nav-link dropdown-toggle text-light" style="font-size: 2rem;float: right;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Account
           </a>
+
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a [routerLink]="'/login'" style="font-size: 2rem;" class="dropdown-item nav-link">Login</a></li>
-            <li><a [routerLink]="'/register'" style="font-size: 2rem;" class="dropdown-item nav-link">Register</a></li>
+            <li><a *ngIf="!authservice.loggedIn()" [routerLink]="'/login'" routerLinkActive="active" style="font-size: 2rem;" class="dropdown-item nav-link">Login</a></li>
+            <li><a *ngIf="!authservice.loggedIn()" [routerLink]="'/register'" routerLinkActive="active" style="font-size: 2rem;" class="dropdown-item nav-link">Register</a></li>
+            <li><a href="" class="dropdown-item nav-link" style="cursor: pointer;text-decoration: none;font-size: 2rem;" *ngIf="authservice.loggedIn()" (click)="authservice.logoutuser()">Logout</a></li>
           </ul>
         </li>
-      </ul>
+      <!-- </ul> -->
     </div>
   </div>
 </nav>
