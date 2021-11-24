@@ -6,20 +6,21 @@
 
 
    <div class="mb-3 row ">
-    <label for="username" class="col-sm-2 col-form-label">Username</label>
+    <label for="username" class="col-sm-2 col-form-label" style="font-size: 28px;">Username</label>
     <div class="col-sm-4">
       <input type="text" class="form-control" id="username" [(ngModel)]="username" name="username" required>
     </div>
   </div>
   <div class="mb-3 row ">
-    <label for="password" class="col-sm-2 col-form-label"> Password</label>
+    <label for="password" class="col-sm-2 col-form-label" style="font-size: 28px;"> Password</label>
     <div class="col-sm-4">
       <input type="password" class="form-control" id="password" [(ngModel)]="password" name="password" required>
     </div>
   </div>
-
+  <div class="">
   <button class="btn btn-primary" type="submit" (click)="loginUser()">Login</button>
-
+  <p style="font-size: 28px;">Dont have Account?<a href="register" style="text-decoration: none;font-size: 1.5rem;color: brown;margin-left: 20px;">Register Now</a></p>
+</div>
 
 </div>
 </div>

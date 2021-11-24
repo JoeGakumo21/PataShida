@@ -13,29 +13,44 @@
         <span class="example-spacer" style="color:rgb(4, 29, 16)">Get</span><span style="color:rgb(190, 223, 201)">inTouch</span>
           <p style="color:rgb(4, 29, 16)"><span style="color:rgb(190, 223, 201)">+254</span>791279635</p>
         </div>
-        <div position="end" style=" margin-left:900px">
-                    <!--Facebook-->
-          <button mat-button   class="waves-light m-3" mdbWavesEffect><i class="fab fa-facebook-f left"></i><a style="text-decoration: none;color:rgb(190, 223, 201);font-size: 1.8rem;" href="https://www.facebook.com/">Facebook</a></button>
 
-          <!--Twitter-->
-          <button  mat-icon-button   class="waves-light" mdbWavesEffect><i class="fab fa-twitter left"></i><a href="https://twitter.com/" style="text-decoration: none;color:rgb(190, 223, 201);font-size: 1.8rem;">Twitter</a></button>
-
-        </div>
       </mat-toolbar-row>
 
-      <mat-toolbar-row style="background-color: rgb(59, 59, 46);">
-        <div >
-          <a mat-button [routerLink]="'/home'" style="font-size: 2rem;" class="home active">Home </a>
-          <a mat-button [routerLink]="'/about'" style="font-size: 2rem;"  class="home"> About </a>
-          <a mat-button [routerLink]="'/agroproduct'" style="font-size: 2rem;" class="home">Agri-Products </a>
-          <a mat-button [routerLink]="'/login'" style="font-size: 2rem;" class="home"> Login </a>
-          <a mat-button [routerLink]="'/register'" style="font-size: 2rem;"  class="home"> Register </a>
-
-        </div>
-      </mat-toolbar-row>
     </mat-toolbar>
   </p>
 </div>
+<div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(59, 59, 46);">
+  <div class="container-fluid">
+    <a class="navbar-brand text-light" style="font-size: 2rem;"  href="/"><span style="color:hsl(73, 100%, 50%);">Pata</span>Shida</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item text-light">
+          <a [routerLink]="'/home'" style="font-size: 2rem;" class="home  nav-link active text-light">Home</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="'/about'" style="font-size: 2rem;"  class="nav-link text-light" >About</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="'/agroproduct'" style="font-size: 2rem;"  class="nav-link text-light" >AgriProducts</a>
+        </li>
+        </ul>
+        <li class="nav-item dropdown" style="float: right;">
+          <a class="nav-link dropdown-toggle text-light" style="font-size: 2rem;float: right;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Account
+          </a>
 
-
-
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a *ngIf="!authservice.loggedIn()" [routerLink]="'/login'" routerLinkActive="active" style="font-size: 2rem;" class="dropdown-item nav-link">Login</a></li>
+            <li><a *ngIf="!authservice.loggedIn()" [routerLink]="'/register'" routerLinkActive="active" style="font-size: 2rem;" class="dropdown-item nav-link">Register</a></li>
+            <li><a href="" class="dropdown-item nav-link" style="cursor: pointer;text-decoration: none;font-size: 2rem;" *ngIf="authservice.loggedIn()" (click)="authservice.logoutuser()">Logout</a></li>
+          </ul>
+        </li>
+      <!-- </ul> -->
+    </div>
+  </div>
+</nav>
+</div>
